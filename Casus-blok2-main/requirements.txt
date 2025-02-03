@@ -1,0 +1,3 @@
+Flask
+pysqlite3
+werkzeug
