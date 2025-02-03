@@ -18,6 +18,7 @@ Het is belangrijk om de volledige README te lezen voordat je verdergaat. Dit zor
 
 Download de FlaskUI 3.0   
 Pak het bestand uit door middel van 7-Zip of Winrar  
+Open de volledige folder in je ide (wij gebruiken vscode)
 Open de main.py  
 Run de main.py    
 
