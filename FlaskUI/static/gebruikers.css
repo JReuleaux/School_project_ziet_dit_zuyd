@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2f3d; /* Antraciet-achtige achtergrondkleur */
+    color: #e0e0e0; /* Lichtgrijze tekstkleur */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #3a3f4b; /* Lichtere antraciet kleur voor de container */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 75%; /* Container neemt nu 75% van de breedte in beslag */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff; /* Witte tekstkleur voor de titel */
+}
+
+.table-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.table-actions a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #007BFF;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.table-actions a:hover {
+    background-color: #0056b3;
+    text-decoration: none; /* Verwijder onderstreping */
+}
+
+/* Specifieke stijl voor de knop "Nieuwe Gebruiker Toevoegen" */
+.table-actions a:first-of-type {
+    background-color: #28a745; /* Groene achtergrondkleur */
+    color: white;
+}
+
+.table-actions a:first-of-type:hover {
+    background-color: #218838; /* Groene hoverkleur */
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Standaardtable-layout voor meer ruimte in de kolommen */
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #555;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #007BFF; /* Blauwe achtergrond voor de headers */
+    color: white;
+    font-size: 16px;
+}
+
+td {
+    background-color: #484f5b; /* Lichtere antraciet voor de data-cellen */
+    color: white;
+}
+
+/* Verwijder de scheiding en plaats de knoppen naast elkaar */
+.action-buttons {
+    display: flex;
+    justify-content: flex-start;  /* Laat knoppen goed uitlijnen */
+    gap: 10px; /* Ruimte tussen de knoppen */
+    flex-wrap: wrap;  /* Laat de knoppen naar de volgende regel verplaatsen indien nodig */
+}
+
+/* Algemene stijl voor knoppen */
+.action-buttons button {
+    background-color: #ffc107;
+    color: white;
+    padding: 5px 20px; /* Zorg ervoor dat de padding hetzelfde is voor alle knoppen */
+    border: none;
+    border-radius: 5px; /* Zorgt voor gelijke afronding van de hoeken */
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.action-buttons button:hover {
+    background-color: #e0a800;
+}
+
+/* Specifieke stijl voor de knop "Blokkeren" */
+.action-buttons .edit-button {
+    background-color: #ffc107; /* Gele achtergrondkleur voor blokkeren */
+    color: white;
+}
+
+.action-buttons .edit-button:hover {
+    background-color: #e0a800; /* Donkerder geel bij hover */
+}
+
+/* Specifieke stijl voor de knop "Onblokkeren" (Deblokkeren) */
+.action-buttons .edit-button.deblokkeren {
+    background-color: #28a745; /* Groene achtergrondkleur voor deblokkeren */
+    color: white;
+}
+
+.action-buttons .edit-button.deblokkeren:hover {
+    background-color: #218838; /* Groene hoverkleur */
+}
+
+/* Verwijderknop */
+.delete-button {
+    background: #dc3545 !important; /* Rood voor verwijderen */
+    color: white;
+    padding: 5px 20px !important; /* Gelijke afmetingen als de andere knoppen */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+}
+
+.delete-button:hover {
+    background: #c82333 !important; /* Donkerder rood bij hover */
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    background-color: #0056b3; /* Dezelfde hoverkleur als in gebruiker_toevoegen.css */
+    text-decoration: none; /* Verwijder onderstreping */
+}
