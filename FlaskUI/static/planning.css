@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #2c2f3d; /* Antraciet-achtige achtergrondkleur */
+    color: #e0e0e0; /* Lichtgrijze tekstkleur */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    background: #3a3f4b; /* Lichtere antraciet kleur voor de container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff; /* Witte tekstkleur voor de titel */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button {
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background: #0056b3;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #484f5b; /* Lichtere antraciet voor de form-container */
+    border-radius: 5px;
+}
+
+form input, form select, form button {
+    margin-right: 10px;
+    padding: 8px;
+}
+
+.add-button {
+    padding: 10px;
+    background: #28a745; /* Blauwe achtergrond, net als de terugknop */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.add-button:hover {
+    background: #218838; /* Donkerder blauw bij hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #555;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #007BFF; /* Blauwe achtergrond voor de headers */
+    color: white;
+}
+
+td {
+    background-color: #484f5b; /* Lichtere antraciet voor de data-cellen */
+    color: white;
+}
+
+.delete-button {
+    background: #dc3545;
+    color: white;
+    padding: 5px 20px; /* Zelfde padding als de bewerken-knop */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px; /* Zelfde lettergrootte als de bewerken-knop */
+}
+
+.delete-button:hover {
+    background: #c82333;
+}
+
+.edit-button {
+    background: #ffc107; /* Geel voor de bewerk-knop */
+    color: white;
+    padding: 5px 20px; /* Zelfde padding als de verwijder-knop */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Kleine marge tussen de knoppen */
+    text-decoration: none; /* Verwijdert de onderstreping */
+    text-align: center;
+    font-size: 14px; /* Zelfde lettergrootte als de verwijder-knop */
+}
+
+.edit-button:hover {
+    background: #e0a800; /* Donkerder geel bij hover */
+}

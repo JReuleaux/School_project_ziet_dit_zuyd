@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning Wijzigen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='planning_wijzigen.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Wijzig Reservering</h1>
+        </div>
+
+        <form action="/planning/wijzigen/{{ reservering[0] }}" method="POST">
+            <label for="datum">Datum:</label>
+            <input type="text" name="datum" value="{{ reservering[1] }}" required>
+
+            <label for="tijd">Tijd:</label>
+            <input type="text" name="tijd" value="{{ reservering[2] }}" required>
+
+            <label for="beschrijving">Beschrijving:</label>
+            <input type="text" name="beschrijving" value="{{ reservering[7] }}" required>
+
+            <label for="lokaal_id">Lokaal:</label>
+            <select name="lokaal_id" required>
+                <option value="">Selecteer een lokaal</option>
+                {% for lokaal in lokalen %}
+                    <option value="{{ lokaal }}" {% if lokaal == reservering[8] %}selected{% endif %}>
+                        {{ lokaal }}
+                    </option>
+                {% endfor %}
+            </select>
+
+            <button type="submit" class="update-button">Wijzigen</button>
+            <a href="/planning" class="back-button">Terug naar Planning</a> <!-- Terug knop onder de Wijzigen knop -->
+            <a href="{{ url_for('dashboard') }}">Terug naar Dashboard</a> <!-- Nieuwe knop -->
+        </form>
+    </div>
+
+</body>
+</html>

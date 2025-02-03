@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2f3d; /* Antraciet-achtige achtergrondkleur */
+    color: #e0e0e0; /* Lichtgrijze tekstkleur */
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #3a3f4b; /* Lichtere antraciet kleur */
+    width: 250px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blauwe achtergrond */
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%; /* Zorgt ervoor dat de knop de hele breedte van de container gebruikt */
+    box-sizing: border-box; /* Houdt rekening met de padding bij de breedte */
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a.button:hover {
+    background-color: #0056b3; /* Donkerblauwe hover kleur */
+}
+
+.sidebar ul li a.button:active {
+    background-color: #004080; /* Nog donkerder bij het klikken */
+}
+
+/* Specifieke styling voor de uitlogknop */
+.sidebar ul li:nth-child(4) a.button {
+    background-color: #dc3545 !important; /* Rood voor de uitlogknop */
+}
+
+.sidebar ul li:nth-child(4) a.button:hover {
+    background-color: #c82333 !important; /* Donkerder rood bij hover */
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #3a3f4b;
+    padding: 30px;
+}
+
+.main-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    background-color: #484f5b;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+}
+
+.stat-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.tables-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.table-box {
+    background-color: #484f5b; /* Zelfde kleur als de stat-boxen */
+    padding: 20px;
+    border-radius: 8px;
+    width: 48%;
+}
+
+.table-box h2 {
+    text-align: center; /* Centraal uitlijnen van de titel */
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Standaardtable-layout voor meer ruimte in de kolommen */
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #333;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #007BFF; /* Blauwe achtergrond voor de headers */
+    color: white;
+    font-size: 16px;
+}
+
+td {
+    background-color: #484f5b; /* Lichtere antraciet voor de data-cellen */
+    color: white;
+}
