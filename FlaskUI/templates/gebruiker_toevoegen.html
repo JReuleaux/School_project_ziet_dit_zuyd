@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gebruiker Toevoegen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='gebruiker_toevoegen.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Nieuwe Gebruiker Toevoegen</h1>
+        <form method="POST">
+            <div>
+                <label for="voornaam">Voornaam:</label>
+                <input type="text" id="voornaam" name="voornaam" required>
+            </div>
+            <div>
+                <label for="achternaam">Achternaam:</label>
+                <input type="text" id="achternaam" name="achternaam" required>
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="wachtwoord">Wachtwoord:</label>
+                <input type="password" id="wachtwoord" name="wachtwoord" required>
+            </div>
+            <div>
+                <label for="rol">Rol:</label>
+                <select id="rol" name="rol" required>
+                    <option value="0">Gebruiker</option>
+                    <option value="1">Docent</option>
+                    <option value="2">Administrator</option>
+                    <option value="3">Beheerder</option>
+                </select>
+            </div>
+            <button type="submit">Gebruiker toevoegen</button>
+        </form>
+        <br><br>
+        <a href="{{ url_for('gebruikers_overzicht') }}">Terug naar Gebruikersoverzicht</a>
+        <br><br>
+        <a href="{{ url_for('dashboard') }}">Terug naar Dashboard</a> <!-- Nieuwe knop -->
+    </div>
+</body>
+</html>

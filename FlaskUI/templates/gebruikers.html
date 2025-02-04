@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gebruikers Overzicht</title>
+    <link rel="stylesheet" href="static/gebruikers.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gebruikers Overzicht</h1>
+        <div class="table-actions">
+            <a href="{{ url_for('gebruikers_toevoegen') }}">Nieuwe Gebruiker Toevoegen</a>
+            <a href="{{ url_for('dashboard') }}">Terug naar Dashboard</a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Voornaam</th>
+                    <th>Achternaam</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Acties</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for gebruiker in gebruikers %}
+                    <tr>
+                        <td>{{ gebruiker[1] }}</td>  <!-- Voornaam -->
+                        <td>{{ gebruiker[2] }}</td>  <!-- Achternaam -->
+                        <td>{{ gebruiker[3] }}</td>  <!-- Email -->
+                        <td>{{ gebruiker[4] }}</td>  <!-- Rol -->
+                        <td class="action-buttons">
+                            {% if gebruiker[4] == -1 %}
+                                <form action="{{ url_for('gebruikers_onblokkeren', id=gebruiker[0]) }}" method="POST" style="display:inline;">
+                                    <button type="submit" class="edit-button deblokkeren" onclick="return confirm('Weet je zeker dat je deze gebruiker wilt onblokkeren?');">Deblokkeren</button>
+                                </form>
+                            {% else %}
+                                <form action="{{ url_for('gebruikers_blokkeren', id=gebruiker[0]) }}" method="POST" style="display:inline;">
+                                    <button type="submit" class="edit-button" onclick="return confirm('Weet je zeker dat je deze gebruiker wilt blokkeren?');">Blokkeren</button>
+                                </form>
+                            {% endif %}
+                            <form action="{{ url_for('gebruikers_verwijderen', id=gebruiker[0]) }}" method="POST" style="display:inline;">
+                                <button type="submit" class="delete-button" onclick="return confirm('Weet je zeker dat je deze gebruiker wilt verwijderen?');">Verwijderen</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

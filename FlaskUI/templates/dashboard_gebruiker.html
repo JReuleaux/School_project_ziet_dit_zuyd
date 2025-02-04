@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gebruiker Dashboard</title>
+    <link rel="stylesheet" href="static/dashboard_gebruiker.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Gebruiker</h2>
+            <ul>
+                <li><a href="/planning" class="button">Planning Overzicht</a></li>
+                <li><a href="/logout" class="button">Uitloggen</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1>Welkom, {{ user_voornaam }} {{ user_achternaam }}!</h1>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>Aantal Lesuren</h3>
+                    <p>20</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Aantal Studenten</h3>
+                    <p>{{ total_students }}</p>
+                </div>
+            </div>
+
+            <div class="table-box">
+                <h2>Overzicht van reserveringen</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Datum</th>
+                            <th>Tijd</th>
+                            <th>Locatie</th>
+                            <th>Docent</th>
+                            <th>Beschrijving</th>
+                            <th>Lokaal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for res in reservaties %}
+                        <tr>
+                            <td>{{ res[1] }}</td>
+                            <td>{{ res[2] }}</td>
+                            <td>{{ res[3] }}</td>
+                            <td>{{ res[5] }} {{ res[6] }}</td>
+                            <td>{{ res[7] }}</td>
+                            <td>{{ res[8] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
